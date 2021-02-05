@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Datasources Sample</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+    <!-- Extensions Library (this will be hosted on a CDN eventually) -->
+    <script src="../../lib/tableau.extensions.1.latest.js"></script>
+
+    <!-- Our extension's code -->
+    <script src="./battles_4.js"></script>
+
+    <!-- An icon library, learn more here: https://material.io/resources/icons/?style=baseline -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+<!--
+      <div class="row" style="border-style: solid red;">
+        <div class="col-sm-4" style="border-style: solid yellow";>
+          One of three columns
+        </div>
+        <div class="col-sm-4">
+          One of three columns
+        </div>
+        <div class="col-sm-4">
+          One of three columns
+        </div>
+      </div>
+    -->
+        <div id="selected_marks">
+            <h4>Marks for <span class="sheet_name" id="selected_marks_title"></span>
+              <button title="Reset Filters" type="button" class="btn btn-link" id="reset_filters_button">
+                <i class="material-icons">replay</i>
+              </button>
+              <p id="message">No marks selected</p>
+            </h4>
+            <p id="filter">Filter By:  
+              <input type="radio" id="attackerKing" name="filter" value="True" checked> <label for="attackerKing"> Attacker King</label>
+              <input type="radio" id="defenderKing" name="filter" > <label for="defenderKing"> Defender King</label><br>
+            </p>
+            <!--<p id="message">No marks selected</p>-->
+        </div>
+        <!--
+        <button title="Reset Filters" type="button" class="btn btn-link" id="reset_filters_button">
+          <i class="material-icons">replay</i>
+        </button>
+      -->
+        <div id="my_network"></div>
+    </div>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.js"></script>
+  </body>
+</html>
